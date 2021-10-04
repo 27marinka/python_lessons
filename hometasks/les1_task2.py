@@ -15,7 +15,7 @@ current_year = now.year
 birth_year = current_year - age
 bio = name + ' ' + surname + ' ' + str(birth_year) + ' ростом ' + str(height) + ' см'
 print(bio)
-print('the end')
+
 
 # вычислить Год рождения (относительно текущего года) и присвоить переменной birth_year
 # Составить строку по шаблону {name} {surname} {birth_year} ростом {height} см и присвоить переменной bio
