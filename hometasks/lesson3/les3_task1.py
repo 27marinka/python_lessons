@@ -16,7 +16,7 @@ while more_input:
     item = input(">>")
     user_list.append(item)
     more = input("Do you want to enter one more item? (Y/N) >>")
-    if more != 'Y':
+    if more.upper() != 'Y':
         more_input = 0
         print("Input finished")
 
@@ -28,16 +28,9 @@ num = 0
 list_len = len(user_list)
 
 while num < (list_len - 1):
-    item1 = user_list[num]
-    item2 = user_list[num+1]
-    user_list[num] = item2
-    user_list[num+1] = item1
+    user_list[num], user_list[num + 1] = user_list[num + 1], user_list[num]
     num += 2
 
 print("user_list after:")
 print(user_list)
-
-
-
-
 
