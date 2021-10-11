@@ -20,7 +20,6 @@ while more_input:
         more_input = 0
         print("Input finished")
 
-
 print("user_list before:")
 print(user_list)
 
@@ -33,4 +32,3 @@ while num < (list_len - 1):
 
 print("user_list after:")
 print(user_list)
-
