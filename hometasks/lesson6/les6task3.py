@@ -8,7 +8,6 @@
 input_string = "Пал, а норов худ и дух ворона лап."
 
 
-
 def is_palindrome(my_str):
     formatted_str = my_str.lower()
     new_string = []
