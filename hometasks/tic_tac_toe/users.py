@@ -1,6 +1,6 @@
 import random
 
-from tic_tac_toe.constants import USER_TEMPLATE, COMP_NAMES, SYMBOLS
+from hometasks.tic_tac_toe.constants import USER_TEMPLATE, COMP_NAMES, SYMBOLS
 
 
 def create_user(symbol) -> dict:
@@ -45,7 +45,7 @@ def ask_mode() -> str:
         continue
 
 
-def create_users(mode) -> list[dict]:
+def create_users(mode) -> list:
     users = []
     for symbol, mode in zip(SYMBOLS, ("USER", mode)):
         user = get_user(mode, symbol)

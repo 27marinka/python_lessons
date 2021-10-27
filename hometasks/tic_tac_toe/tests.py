@@ -1,4 +1,4 @@
-from tic_tac_toe.board import get_board, board_match
+from hometasks.tic_tac_toe.board import get_board, board_match
 
 
 def board_test():
