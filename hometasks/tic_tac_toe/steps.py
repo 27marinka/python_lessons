@@ -1,4 +1,4 @@
-def get_step() -> list[int, int]:
+def get_step() -> list:
     while True:
         result = []
         input_step = input("Введите координаты хода через пробел\n")
@@ -14,7 +14,7 @@ def get_step() -> list[int, int]:
         return result
 
 
-def chek_step(board: list[list], step: list[int, int]) -> bool:
+def chek_step(board: list, step: list) -> bool:
     try:
         cell = board[step[0]][step[1]]
         if not cell:
@@ -24,7 +24,7 @@ def chek_step(board: list[list], step: list[int, int]) -> bool:
     return False
 
 
-def user_step(user: dict, board: list[list]):
+def user_step(user: dict, board: list):
     while True:
         step = get_step()
         if chek_step(board, step):
