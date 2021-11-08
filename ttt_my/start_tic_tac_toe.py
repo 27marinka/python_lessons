@@ -12,5 +12,3 @@ python start_tic_tac_toe.py 2  - 2 players game, you will be prompt for users na
 """
 
 init_game()
-
-

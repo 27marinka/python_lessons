@@ -1,6 +1,8 @@
 import sys
 import random
 
+# I was trying to do multilanguage interface, but couldn't implement this. Currently only EN language is implemented
+# TODO: implement multilanguage interface
 PHRASES = {
     "hello": {'ru': 'Привет! начинаем игру в крестики - нолики!\n',
               'en': 'Hi! Start playing tic-tac-toe!\n'},
@@ -18,13 +20,17 @@ PHRASES = {
              'en': 'You are playing with '}
 }
 
+DEFAULT_LANGUAGE = 'en'
+
 GAME_MODE = {
     '1': "COMP",
     '2': "USER"
 }
 
 
-def introduction(lang: str) -> dict:
+# creates users of the game - gets info from parameters or from user prompt
+def introduction() -> dict:
+    lang = DEFAULT_LANGUAGE
     print(PHRASES["hello"][lang])
     # arguments
     program_args = sys.argv
@@ -60,10 +66,8 @@ def introduction(lang: str) -> dict:
     return users
 
 
-
+# random Player names for COMP
 def get_random_name() -> str:
     comp_names = ['Garry Potter', 'Hermione Granger', 'Dobby', 'Lord Voldemort', 'Draco Malfoy', 'Albus Dumbledore']
     random_name = random.choice(comp_names)
     return random_name
-
-# introduction('en')
