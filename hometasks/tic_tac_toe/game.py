@@ -3,6 +3,7 @@ from itertools import cycle
 from hometasks.tic_tac_toe.board import get_board, board_match
 from hometasks.tic_tac_toe.steps import user_step
 from hometasks.tic_tac_toe.users import ask_mode, create_users
+from hometasks.tic_tac_toe.board import print_board
 
 
 def game_init() -> dict:
@@ -17,13 +18,14 @@ def game_end():
     pass
 
 
-def game_cycle(users: list[dict, ...], board: list[list]):
+def game_cycle(users: list, board: list):
     # 1 должна циклично итерироваться по пользователям либо написать свой цикличный итератор либо найти его в itertools
     # Опрашивать пользователя на предмет хода
     # Проверяем возможность хода
     # Проверяем выйгрышный вариант
     # Либо поздравить с победой, либо обьявить Ничью
     for step_num, user in enumerate(cycle(users), 1):
+        print_board(board)
         print(f"Ход Игрока: {user['name']}")
         user_step(user, board)
         if board_match(board):

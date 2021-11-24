@@ -5,7 +5,6 @@ print(Back.GREEN + 'and with a green background')
 print(Fore.BLACK + 'some black text')
 
 
-
 print(Back.CYAN )
 
 dog = "Шарик"
